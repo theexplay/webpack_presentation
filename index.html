@@ -33,8 +33,10 @@
   <section class="slide" style="text-align: center;">
     <h2 style="padding-bottom: 10px;">Что такое webpack</h2>
     <p>Webpack - это система сборки (бандлер) с массой возможностей.</p>
-    <figure><img style="width: 60%;" src="pictures/webpack-gulp-cover.png" alt=""></figure>
-    <p>Gulp/grunt - это общая система (таск раннеры) для организации задач, которая сама по себе сборку не поддерживает, но её можно на ней написать.</p>
+    <div class="next">
+      <figure><img style="width: 60%;" src="pictures/webpack-gulp-cover.png" alt=""></figure>
+      <p>Gulp/grunt - это общая система (таск раннеры) для организации задач, которая сама по себе сборку не поддерживает, но её можно на ней написать.</p>
+    </div>
   </section>
 
   <section class="slide">
@@ -55,20 +57,20 @@
 
 	<section class="slide">
 		<h2>Плюсы</h2>
-		<ol class="next">
-			<li>Автоматически строит дерево зависимостей ресурсов</li>
-			<li>Воспринимает как require()- так и import-синтаксисы модуля</li>
-			<li>Позволяет осуществлять продвинутое разделение (оптимизацию) кода</li>
-			<li>Hot Reload для более быстрой разработки с помощью React, Vue.js и подобных фреймворков</li>
+		<ol>
+			<li class="next">Автоматически строит дерево зависимостей ресурсов</li>
+			<li class="next">Воспринимает как require()- так и import-синтаксисы модуля</li>
+			<li class="next">Позволяет осуществлять продвинутое разделение (оптимизацию) кода</li>
+			<li class="next">Hot Reload для более быстрой разработки с помощью React, Vue.js и подобных фреймворков</li>
 		</ol>
 	</section>
 
 	<section class="slide">
 		<h2>Минусы</h2>
 		<ol class="next">
-			<li>Не подойдет для новичков</li>
-			<li>Работа с файлами CSS, картинками и другими не JS ресурсами по началу сбивает с толку</li>
-			<li>Документация могла бы быть лучше</li>
+			<li class="next">Не подойдет для новичков</li>
+			<li class="next">Работа с файлами CSS, картинками и другими не JS ресурсами по началу сбивает с толку</li>
+			<li class="next">Документация могла бы быть лучше</li>
 		</ol>
 	</section>
 
@@ -103,18 +105,10 @@
     </pre>
 
     <p>Описываем конфигурацию для нашего вебпака в <b><i>webpack.config.js</i></b> в корне нашего проекта.</p>
-    <style>
-      .hidden-code {
-        background-color: #fff;
-        transform: translate(-8px, 400px);
-        transition: 500ms ease;
-      }
+  </section>
 
-      .hidden-code.active {
-        transform: translate(-8px, -200px);
-      }
-    </style>
-    <div class="hidden-code next"><h6><mark>webpack.config.js</mark></h6>
+  <section class="slide">
+    <h2><mark>webpack.config.js</mark></h2>
       <pre>
       <code>module.exports = {</code>
       <code>  entry: './src/js/index.js',</code>
@@ -123,11 +117,41 @@
       <code>    path: __dirname + "/output"</code>
       <code>  }</code>
       <code>}</code>
-    </pre></div>
+    </pre>
   </section>
 
   <section class="slide">
+    <h2>Запуск</h2>
+    <p>В идеале, запускать следует запускать через</p>
+    <pre>
+      <code><mark>$</mark> node_modules/.bin/webpack</code>
+    </pre>
+    <span>или</span>
+    <pre>
+      <code><mark>$</mark> npx webpack</code>
+    </pre>
+    <span>или</span>
+    <pre>
+      <code><mark>$</mark> NPM scripts</code>
+    </pre>
+    <p style="position:absolute;right: 50px;top: 270px;left: 60%;">Таким образом, мы сможем избежать проблем разной версии вебпака в разных проектах</p>
+  </section>
 
+  <section class="slide">
+    <h2>Примеры. </h2>
+    <img src="pictures/dog.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>Полезные ссылки</h2>
+    <ul>
+      <li><a href="https://webpack.js.org/concepts/">Official doc</a></li>
+      <li><a href="https://blog.envylabs.com/getting-started-with-webpack-2-ed2b86c68783">Getting Started with webpack</a></li>
+      <li><a href="https://buddy.works/blog/webpack-vs-gulp">webpack-vs-gulp</a></li>
+      <li><a href="https://www.youtube.com/watch?v=mXRkFMg4PR0&t=4h28m43s">youtube presentation</a></li>
+      <li><a href="https://proglib.io/p/webpack-in-15/">Webpack за 15 минут</a></li>
+      <li><a href="https://medium.com/webpack/webpack-4-beta-try-it-today-6b1d27d7d7e2">webpack 4 beta — try it today!</a></li>
+    </ul>
   </section>
 
 	<div class="progress"></div>
